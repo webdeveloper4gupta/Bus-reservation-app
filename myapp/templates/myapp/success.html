@@ -1,0 +1,21 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+
+<div class="container">
+        <div class="row">
+            <div class="col-sm-6 mx-auto" style="margin-top: 70px">
+                <form action="{% url 'signout' %}" method="post">
+                    {% csrf_token %}
+                    {{user}} you are successful login and your user id is {{id}}
+
+
+                    <div class="pull-right">
+                        <button type="Submit" class="btn btn-success float-right" style="background-color:teal">Sign out</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
